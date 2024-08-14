@@ -1,0 +1,101 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+header h1 {
+  font-size: 2.5em;
+  color: #333;
+}
+
+.service-sections {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.service-section {
+  flex: 1;
+  margin: 0 10px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.service-section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #007bff;
+}
+
+.service-section form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.service-section label {
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #555;
+}
+
+.service-section input[type="file"] {
+  margin-bottom: 15px;
+}
+
+.service-section button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.service-section button:hover {
+  background-color: #0056b3;
+}
+
+.info {
+  text-align: center;
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.info h2 {
+  margin-top: 20px;
+  font-size: 1.5em;
+  color: #333;
+}
+
+.info p {
+  color: #666;
+  line-height: 1.6;
+}
+
+.info ul {
+  color: #666;
+  line-height: 1.6;
+}

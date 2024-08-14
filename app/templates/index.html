@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>File Compression and Decompression</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>File Compression and Decompression Service</h1>
+      </header>
+      <div class="service-sections">
+        <div class="service-section">
+          <h2>Compress a File</h2>
+          <form
+            method="post"
+            enctype="multipart/form-data"
+            action="{{ url_for('main.index') }}"
+          >
+            <input type="hidden" name="action" value="compress" />
+            <label for="compress-file">Select a file to compress:</label>
+            <input type="file" id="compress-file" name="file" required />
+            <button type="submit">Compress and Download</button>
+          </form>
+        </div>
+        <div class="service-section">
+          <h2>Decompress a File</h2>
+          <form
+            method="post"
+            enctype="multipart/form-data"
+            action="{{ url_for('main.index') }}"
+          >
+            <input type="hidden" name="action" value="decompress" />
+            <label for="decompress-file"
+              >Select a .huf file to decompress:</label
+            >
+            <input type="file" id="decompress-file" name="file" required />
+            <button type="submit">Decompress and Download</button>
+          </form>
+        </div>
+      </div>
+      <section class="info">
+        <h2>How to Use This Service</h2>
+        <p>
+          This service allows you to compress and decompress files using the
+          Huffman coding algorithm, a well-known lossless data compression
+          method. To compress a file, simply upload your file and click on
+          "Compress and Download". The service will generate a compressed file
+          with a <strong>.huf</strong> extension. Please note that the
+          compressed file is not human-readable, as it is encoded to optimize
+          storage and transmission.
+        </p>
+        <p>
+          Upload your file to compress it for efficient transmission. After
+          compression, download the compressed file and send it over the
+          network. The recipient can then use our decompression service to
+          restore the file to its original form.
+        </p>
+        <p>
+          If you receive a .huf file, you can use the decompression service to
+          restore it to its original form. Upload the .huf file and click on
+          "Decompress and Download" to retrieve the original file.
+        </p>
+        <h2>Why Compress Data?</h2>
+        <p>
+          Data compression is essential in today's digital world, where
+          efficient data transmission and storage are crucial. Compressing data
+          reduces the file size, which offers several significant benefits:
+        </p>
+        <h2>Key Benefits of Data Compression</h2>
+        <p>
+          <strong>Bandwidth Optimization:</strong> Smaller files mean less
+          bandwidth usage, which is especially important for users with limited
+          bandwidth or in environments where network capacity is constrained.
+        </p>
+        <p>
+          <strong>Cost Reduction:</strong> By reducing the size of files, data
+          compression lowers data transfer costs, particularly in data-intensive
+          environments such as cloud storage or large-scale data transfers.
+        </p>
+        <p>
+          <strong>Faster Transmission:</strong> Smaller data packets can be
+          transmitted more quickly, improving the performance of networked
+          applications and reducing latency, which is critical in real-time
+          communications.
+        </p>
+        <p>
+          <strong>Storage Efficiency:</strong> Compressed files take up less
+          space on storage devices, allowing you to store more data within the
+          same capacity.
+        </p>
+        <h2>Technical Details</h2>
+        <p>
+          This service uses the Huffman coding algorithm, a widely-used lossless
+          data compression method. "Lossless" means that the compression does
+          not remove any information from the original file; the decompressed
+          file will be identical to the original.
+        </p>
+        <p>
+          Huffman coding works by assigning shorter codes to more frequently
+          occurring characters in the file, resulting in an overall reduction in
+          file size. The compressed file is saved with a .huf extension and must
+          be decompressed using the same algorithm to return it to its original
+          state.
+        </p>
+        <h2>Important Notes</h2>
+        <p>
+          - The .huf file format is not human-readable. It is specifically
+          designed for efficient storage and transmission.
+        </p>
+        <p>
+          - Ensure you use this service both to compress files before sending
+          them over a network and to decompress .huf files you receive.
+        </p>
+        <p>
+          - Data compression is especially useful for files that are large or
+          need to be transmitted frequently, such as text documents, logs, and
+          certain types of media files.
+        </p>
+      </section>
+    </div>
+  </body>
+</html>
